@@ -6,26 +6,28 @@ A working example for developing [Alexa Skills Kit](http://developer.amazon.com/
 
 ## Requirements
 
-* [Golang](https://golang.org/) v1.4+
-** Linux compilation must be installed, as AWS Lambda is Linux based
-* go get github.com/jasonmoo/lambda_proc
-* [s3up](https://labix.org/s3up)
-* [awscli](https://aws.amazon.com/cli/)
-** On OSX: brew install awscli
+1. [Golang](https://golang.org/) v1.4+
+..* Linux compilation must be installed, as AWS Lambda is Linux based
+2. go get github.com/jasonmoo/lambda_proc
+3. [s3up](https://labix.org/s3up)
+4. [awscli](https://aws.amazon.com/cli/)
+..* On OSX: brew install awscli
 
 ## Installation
 
-* git clone https://github.com/jsgoecke/lambda-go.git
-** Change the LAMBDA_PROC variable in the file 'build.sh' to the name of your Lambda function on AWS Lambda
-* Setup an AWS Lambda function with the name set for LAMBDA_PROC in build.sh
-* Setup an AWS S3 Bucket with the same name set for LAMBDA_PROC in build.sh
-* Setup an Alex Skill with the 'Alexa Skills Settings' and pointing to your AWS Lambda function, its recommended to use [ARN](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
+1. git clone https://github.com/jsgoecke/lambda-go.git
+..* Change the LAMBDA_PROC variable in the file 'build.sh' to the name of your Lambda function on AWS Lambda
+2. Setup an AWS Lambda function with the name set for LAMBDA_PROC in build.sh
+3. Setup an AWS S3 Bucket with the same name set for LAMBDA_PROC in build.sh
+4. Setup an Alex Skill with the 'Alexa Skills Settings' and pointing to your AWS Lambda function, its recommended to use [ARN](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
 
 ## Deploy
 
 After configuring your s3up and awscli credentials for S3/Lambda, then:
 
-* ./build.sh
+```
+./build.sh
+```
 
 ### Result
 
