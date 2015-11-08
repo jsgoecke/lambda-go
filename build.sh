@@ -5,7 +5,6 @@ set -x
 
 LAMBDA_FUNC="lambda-go"
 
-cp index.js.template index.js
 sed "s/LAMBDA_FUNC/$LAMBDA_FUNC/g" <index.js.template >index.js
 
 GOOS=linux go build -o $LAMBDA_FUNC
