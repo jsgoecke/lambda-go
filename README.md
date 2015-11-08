@@ -7,11 +7,11 @@ A working example for developing [Alexa Skills Kit](http://developer.amazon.com/
 ## Requirements
 
 1. [Golang](https://golang.org/) v1.4+
-  * Linux compilation must be installed, as AWS Lambda is Linux based
-2. go get github.com/jasonmoo/lambda_proc
+  * Linux compilation must be installed, as AWS Lambda is Linux based (OSX: `brew install go --cross-compile-common`)
+2. `go get github.com/jasonmoo/lambda_proc`
 3. [s3up](https://labix.org/s3up)
 4. [awscli](https://aws.amazon.com/cli/)
-  * On OSX: brew install awscli
+  * On OSX: `brew install awscli`
 
 ## Installation
 
@@ -20,6 +20,10 @@ A working example for developing [Alexa Skills Kit](http://developer.amazon.com/
 2. Setup an AWS Lambda function with the name set for LAMBDA_PROC in build.sh
 3. Setup an AWS S3 Bucket with the same name set for LAMBDA_PROC in build.sh
 4. Setup an Alex Skill with the 'Alexa Skills Settings' and pointing to your AWS Lambda function, its recommended to use [ARN](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
+
+An overview of using AWS Lambda with Alexa may be found here:
+
+https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function
 
 ## Deploy
 
