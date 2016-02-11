@@ -9,8 +9,7 @@ A working example for developing [Alexa Skills Kit](http://developer.amazon.com/
 1. [Golang](https://golang.org/) v1.4+
   * Linux compilation must be installed, as AWS Lambda is Linux based (OSX: `brew install go --cross-compile-common`)
 2. `go get github.com/jasonmoo/lambda_proc`
-3. [s3up](https://labix.org/s3up)
-4. [awscli](https://aws.amazon.com/cli/)
+3. [awscli](https://aws.amazon.com/cli/)
   * On OSX: `brew install awscli`
 
 ## Installation
@@ -18,8 +17,7 @@ A working example for developing [Alexa Skills Kit](http://developer.amazon.com/
 1. git clone https://github.com/jsgoecke/lambda-go.git
   * Change the LAMBDA_PROC variable in the file 'build.sh' to the name of your Lambda function on AWS Lambda
 2. Setup an AWS Lambda function with the name set for LAMBDA_PROC in build.sh
-3. Setup an AWS S3 Bucket with the same name set for LAMBDA_PROC in build.sh
-4. Setup an Alex Skill with the 'Alexa Skills Settings' and pointing to your AWS Lambda function, its recommended to use [ARN](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
+3. Setup an Alex Skill with the 'Alexa Skills Settings' and pointing to your AWS Lambda function, its recommended to use [ARN](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
 
 An overview of using AWS Lambda with Alexa may be found here:
 
@@ -44,27 +42,26 @@ After configuring your s3up and awscli credentials for S3/Lambda, then:
 + zip -r lambda-go.zip lambda-go index.js
 updating: lambda-go (deflated 70%)
 updating: index.js (deflated 63%)
-+ s3up lambda-go.zip lambda-go
-+ aws lambda update-function-code --function-name lambda-go --s3-bucket lambda-go --s3-key lambda-go.zip
++ aws lambda update-function-code --function-name lambda-go --zip-file fileb://lambda-go.zip
 {
-    "CodeSha256": "foo", 
-    "FunctionName": "lambda-go", 
-    "CodeSize": 905999, 
-    "MemorySize": 128, 
-    "FunctionArn": "bar", 
-    "Version": "$LATEST", 
-    "Role": "baz", 
-    "Timeout": 3, 
-    "LastModified": "2015-11-08T15:06:44.854+0000", 
-    "Handler": "index.handler", 
-    "Runtime": "nodejs", 
+    "CodeSha256": "foo",
+    "FunctionName": "lambda-go",
+    "CodeSize": 905999,
+    "MemorySize": 128,
+    "FunctionArn": "bar",
+    "Version": "$LATEST",
+    "Role": "baz",
+    "Timeout": 3,
+    "LastModified": "2015-11-08T15:06:44.854+0000",
+    "Handler": "index.handler",
+    "Runtime": "nodejs",
     "Description": "Lambda Go Example"
 }
 ```
 
 ## Alexa Skill Settings
 
-### Intent Schema 
+### Intent Schema
 
 ```json
 {
